@@ -151,6 +151,7 @@ const toHTML = parfume => `
                 <p><span>Ноты сердца: </span>${parfume.notesM}</p><br>
                 <p><span>Ноты базы: </span>${parfume.notesB}</p><br>
                 <p><span>Описание: </span>${parfume.description}</p>
+                <br>
             </div>
         </div>
         <div class="popup-footer">
