@@ -13,6 +13,10 @@
 
 body {
     background-color: var(--color-light);
+    font-size: 1.5em;
+    &._locked {
+        overflow: hidden;
+    }
 }
 
 .main-container {
@@ -54,6 +58,24 @@ body {
     border-color: var(--color-dbrown);
 }
 
+/*media zapros dlja adaptivnosti pod ekraby telefona i plansheta*/
+@media (max-width: 1000px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);/*ogranicenie po colonkam*/
+        grid-template-rows: repeat(5);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);/*ogranicenie po colonkam*/
+        grid-template-rows: repeat(9);
+    }
+    .card {
+        margin-inline: 0;
+    }
+}
+
 span {
     font-weight: bold;
 }
@@ -82,37 +104,3 @@ ol {
     list-style:decimal;
 }
 
-footer {
-    width: 98%;
-    float: left;
-    padding: 1%;
-    background-color: var(--color-dbrown);
-    color: var(--color-light);
-    border-top: 2px solid silver;
-    margin-top: 10px;
-}
-
-footer #social {
-    float: left;
-    width: 50%;
-}
-
-footer #social img {
-    width: 50px;
-    float: left;
-    margin-right: 5px;
-
-}
-
-footer #rights {
-    float: right;
-    width: 50%;
-    text-align: right;
-    font-size: 1.1em;
-}
-
-footer #rights img {
-    width: 50px;
-    height: auto;
-    margin-top: 10px;
-}

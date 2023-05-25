@@ -28,11 +28,13 @@ setInterval(showNextSlide,5000,'next');
 //click on Next button
 btnNext.onclick = function () {
     showNextSlide('next');
+    setTimeout(showNextSlide,5000,'next');
 };
 
 //click on Previos button
 btnPrev.onclick = function () {
     showNextSlide('prev');
+    setTimeout(showNextSlide,5000,'prev');
 };
 
 //function for slideshow on click
