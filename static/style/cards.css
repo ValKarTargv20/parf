@@ -1,0 +1,51 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);/*ogranicenie po colonkam*/
+    grid-template-rows: repeat(3);
+}
+
+.card {
+    margin: 0.5em;
+    padding: 1em;
+    border-style: solid;
+    border-width: 0.5px;
+    border-radius: 5px;
+}
+
+.card img {
+    display: center;
+    margin: 1em;
+    border-style: solid;
+    border-width: 0.5px;
+    max-width: 250px;
+}
+
+.card>.parf_card {
+    text-align: center;
+    color: var(--color-dbrown);
+}
+
+.card>.parf_card>button {
+    color: var(--color-dbrown);
+    background-color: var(--color-green);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/*media zapros dlja adaptivnosti pod ekraby telefona i plansheta*/
+@media (max-width: 1000px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);/*ogranicenie po colonkam*/
+        grid-template-rows: repeat(5);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);/*ogranicenie po colonkam*/
+        grid-template-rows: repeat(9);
+    }
+    .card {
+        margin-inline: 0;
+    }
+}

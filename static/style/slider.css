@@ -1,0 +1,42 @@
+.slide-container {
+    position: grid;
+    grid-column: 3/11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider {
+    margin: 0 auto;
+    padding-top: 1em;
+}
+.slider>img {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.controls>button {
+    padding: 0;
+    color: var(--color-dbrown);
+    font-weight: bold;
+    background: var(--color-light);
+    border-radius: 15px;
+    border: none;
+    font-size: 50px;
+    line-height: 50px;
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    transition: 1s;
+    opacity: 70%;
+}
+
+.btnPrev {
+    left: 20%;
+}
+
+.btnNext {
+    right: 20%;
+}
